@@ -1,0 +1,186 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  overflow: hidden;
+}
+
+/* Container styles */
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading styles */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+  animation: slideInDown 1s ease-in-out;
+}
+
+/* Input container styles */
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Input styles */
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.todo-input:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Button styles */
+.add-button {
+  background-color: #28a745;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.add-button:active {
+  background-color: #1e7e34;
+}
+
+.add-button i {
+  font-size: 18px;
+}
+
+/* Todos container styles */
+.todos-container {
+  text-align: left;
+}
+
+/* Todo list styles */
+.todos {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todos li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.todos li:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.02);
+}
+
+.todos li button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.todos li button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.todos li button:active {
+  background-color: #bd2130;
+}
+
+/* Image styles */
+.favicon-image {
+  margin-top: 20px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.favicon-image:hover {
+  transform: rotate(360deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
